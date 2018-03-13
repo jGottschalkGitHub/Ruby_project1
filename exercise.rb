@@ -1,8 +1,8 @@
-put "enter your name"
-name = gets.chomp
 first_and_last = false
 puts "What is your full name?"
 name = gets.chomp
+
+#check if there is a space -> firstname and lastname#
 if name.index(" ")!=nil
   firstname = name.split(" ")[0]
   first_and_last = true
@@ -20,6 +20,8 @@ street_array = street_info.split(" ")
 street_details = street_array[0]
 street_number =""
 block_number =""
+
+#check for numbers and add to street_number#
 street_details.split("").each { |char|
   
   if char >= "0" and char <= "9"
